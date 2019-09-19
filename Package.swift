@@ -6,9 +6,14 @@ import PackageDescription
 let package = Package(
     name: "Silica",
     dependencies: [
-        .package(url: "https://github.com/PureSwift/Cairo.git", majorVersion: 1)
+        .package(
+            url: "https://github.com/PureSwift/Cairo.git", 
+            .branch: master
+        )
     ]
     targets: [
-        .target(name: "Silica")
+        .target(
+            name: "Silica"
+        )
     ],
 )
