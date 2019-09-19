@@ -15,5 +15,5 @@ let package = Package(
         .target(
             name: "Silica"
         )
-    ],
+    ]
 )
