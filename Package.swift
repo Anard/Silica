@@ -8,9 +8,9 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/PureSwift/Cairo.git", 
-            .branch: master
+            .branch("master")
         )
-    ]
+    ],
     targets: [
         .target(
             name: "Silica"
