@@ -881,7 +881,7 @@ fileprivate let DefaultPattern = Cairo.Pattern(color: (red: 0, green: 0, blue: 0
 fileprivate extension Silica.CGContext {
     
     /// To save non-Cairo state variables
-    fileprivate final class State {
+    final class State {
         
         var next: State?
         var alpha: CGFloat = 1.0
