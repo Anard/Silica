@@ -14,6 +14,8 @@
 
 import Foundation
 
+// MAYBE : CGRect is ever implemented on Linux Swift 5's Foundation
+//#if os(Linux)
 #if os(Android)
 
 public extension CGRect {
