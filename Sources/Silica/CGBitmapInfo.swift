@@ -14,16 +14,16 @@
 public struct CGBitmapInfo {
     
     /// The components of a bitmap are floating-point values.
-    public var floatComponents: Bool
+    var floatComponents: Bool
     
     /// Alpha information that specifies whether a bitmap contains an alpha channel
     /// and how the alpha channel is generated.
-    public var alpha: Alpha
+    var alpha: Alpha
     
     /// /// The byte ordering of pixel formats.
-    public var byteOrder: ByteOrder
+    var byteOrder: ByteOrder
     
-    public init(floatComponents: Bool = false, alpha: Alpha = .none, byteOrder: ByteOrder = .default) {
+    init(floatComponents: Bool = false, alpha: Alpha = .none, byteOrder: ByteOrder = .default) {
         
         self.floatComponents = floatComponents
         self.alpha = alpha
@@ -61,7 +61,7 @@ public extension CGBitmapInfo {
     ///
     /// - Note: Silica supports premultiplied alpha only for images.
     /// You should not premultiply any other color values specified in Silica.
-    public enum Alpha {
+    enum Alpha {
         
         /// There is no alpha channel.
         case none
@@ -93,7 +93,7 @@ public extension CGBitmapInfo {
     }
     
     /// The byte ordering of pixel formats.
-    public enum ByteOrder {
+    enum ByteOrder {
         
         /// The default byte order.
         case `default`
