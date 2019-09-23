@@ -34,7 +34,7 @@ public extension CGRect {
         set { origin.y = newValue }
     }
     
-    var width: CGFloat {
+    /*var width: CGFloat {
         
         get { return size.width }
         
@@ -51,7 +51,7 @@ public extension CGRect {
     var minX: CGFloat {
         
         return (size.width < 0) ? origin.x + size.width : origin.x
-    }
+    }*/
     
     var midX: CGFloat {
         
@@ -63,10 +63,10 @@ public extension CGRect {
         return (size.width < 0) ? origin.x : origin.x + size.width
     }
     
-    var minY: CGFloat {
+    /*var minY: CGFloat {
         
         return (size.height < 0) ? origin.y + size.height : origin.y
-    }
+    }*/
     
     var midY: CGFloat {
         
@@ -79,7 +79,7 @@ public extension CGRect {
     }
     
     /// Returns a rectangle with a positive width and height.
-    var standardized: CGRect {
+    var anandardized: CGRect {
         
         var rect = self
         
