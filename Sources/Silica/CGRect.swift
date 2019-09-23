@@ -20,66 +20,66 @@ public extension CGRect {
     
     // MARK: - Accessors
     
-    public var x: CGFloat {
+    var x: CGFloat {
         
         get { return origin.x }
         
         set { origin.x = newValue }
     }
     
-    public var y: CGFloat {
+    var y: CGFloat {
         
         get { return origin.y }
         
         set { origin.y = newValue }
     }
     
-    public var width: CGFloat {
+    var width: CGFloat {
         
         get { return size.width }
         
         set { size.width = newValue }
     }
     
-    public var height: CGFloat {
+    var height: CGFloat {
         
         get { return size.height }
         
         set { size.height = newValue }
     }
     
-    public var minX: CGFloat {
+    var minX: CGFloat {
         
         return (size.width < 0) ? origin.x + size.width : origin.x
     }
     
-    public var midX: CGFloat {
+    var midX: CGFloat {
         
         return origin.x + (size.width / 2.0)
     }
     
-    public var maxX: CGFloat {
+    var maxX: CGFloat {
         
         return (size.width < 0) ? origin.x : origin.x + size.width
     }
     
-    public var minY: CGFloat {
+    var minY: CGFloat {
         
         return (size.height < 0) ? origin.y + size.height : origin.y
     }
     
-    public var midY: CGFloat {
+    var midY: CGFloat {
         
         return origin.y + (size.height / 2.0)
     }
     
-    public var maxY: CGFloat {
-        
+    var maxY: CGFloat {
+
         return (size.height < 0) ? origin.y : origin.y + size.height
     }
     
     /// Returns a rectangle with a positive width and height.
-    public var standardized: CGRect {
+    var standardized: CGRect {
         
         var rect = self
         
@@ -97,7 +97,7 @@ public extension CGRect {
     }
     
     /// Returns the smallest rectangle that results from converting the source rectangle values to integers.
-    public var integral: CGRect {
+    var integral: CGRect {
         
         var rect = self.standardized
         
@@ -112,7 +112,7 @@ public extension CGRect {
     }
     
     /// Returns whether a rectangle has zero width or height, or is a null rectangle.
-    public var isEmpty: Bool {
+    var isEmpty: Bool {
         
         return size.width == 0
             || size.height == 0
@@ -120,7 +120,7 @@ public extension CGRect {
     }
     
     /// Returns whether the rectangle is equal to the null rectangle.
-    public var isNull: Bool {
+    var isNull: Bool {
     
         return origin.x.isNaN
             || origin.y.isNaN
@@ -130,18 +130,18 @@ public extension CGRect {
     
     // MARK: - Methods
     
-    public func contains(_ point: CGPoint) -> Bool {
+    func contains(_ point: CGPoint) -> Bool {
         
         return (point.x >= minX && point.x <= maxX)
             && (point.y >= minY && point.y <= maxY)
     }
     
-    public func contains(_ rect: CGRect) -> Bool {
+    func contains(_ rect: CGRect) -> Bool {
     
         return self == union(rect)
     }
     
-    public func union(_ rect: CGRect) -> CGRect {
+    func union(_ rect: CGRect) -> CGRect {
         
         var r1 = self
         var r2 = rect
@@ -169,12 +169,12 @@ public extension CGRect {
         return union
     }
     
-    public func intersects(_ r2: CGRect) -> Bool {
+    func intersects(_ r2: CGRect) -> Bool {
         return self.intersection(r2).isNull == false
     }
     
     /// Returns the intersection of two rectangles.
-    public func intersection(_ other: CGRect) -> CGRect {
+    func intersection(_ other: CGRect) -> CGRect {
         
         var r1 = self
         var r2 = other
