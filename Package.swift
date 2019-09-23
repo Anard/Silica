@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https:/github.com/PureSwift/Cairo", 
+            url: "https:/github.com/PureSwift/Cairo.git", 
             .branch("master")
         )
     ],
